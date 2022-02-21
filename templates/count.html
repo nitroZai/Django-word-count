@@ -1,0 +1,17 @@
+<h1>Word Count Analysis</h1>
+
+<a href="{% url 'home' %}">Click to start all over</a>
+
+<h2>The Data Entered: </h2>
+{{bigText}}
+
+<h2>There are {{wordSplitCount}} words in the data entered by the user</h2>
+
+<h2>Here are analytics for the number of words present:</h2>
+
+{% for dWord, counter in wordDiction %}
+
+<p>{{dWord}}: {{counter}}</p>
+<br>
+
+{% endfor %}
